@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Ghibli-detail</title>
+	<style>
+		*{
+ 		 	box-sizing: border-box;
+ 		 	font-family: 'Rubik', sans-serif;
+ 		 	color: #232323;
+ 		 	margin: 0;
+		}
+
+		.navibar{
+			height: 80px;
+			width: 1200px;
+			font-weight: 300;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.navibar #logo{
+			line-height: 85px;
+		}
+		
+		.navibar #logo img{
+  			vertical-align: middle;
+		}
+
+		.navibar #menu{
+		  	float: left;
+		  	list-style: none;
+		  	margin-left: auto;
+			margin-right: auto;
+		}
+
+		.navibar #menu li{
+		  	float: left;
+		  	margin-left: 100px;
+		  	line-height: 85px;
+		}
+
+		.navibar #menu li a{
+		  	color: #545454;
+		  	font-size: 16px;
+		  	font-weight: light;
+		  	text-decoration: none;
+		}
+
+		.navibar #menu li a:hover{
+		  	color: #3380C6;
+		}
+
+		.header-img{
+        height: 480px;
+        background-image: url("https://www.ghibli.jp/gallery/howl011.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .header-title{
+      font-size: 48px;
+      font-weight: 700;
+      top: 211px;
+      right: 202px;
+      letter-spacing: 10px;
+      color:  white;
+      position: absolute;
+    }
+
+    .movie-intro{
+    	margin-bottom: 84px;
+    }
+
+    .movie-intro h1{
+		font-size: 32px;
+		font-weight: 400;
+		color: #545454;
+		text-align: center;
+		margin-top: 84px;
+		margin-bottom: 48px;
+	}
+
+	.movie-title h2{
+		font-weight: 700;
+		font-size: 30px;
+	}
+
+	.movie-title-sub h3{
+		font-weight: 300;
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+
+	.movie-intro-content p{
+		font-weight: 300;
+		font-size: 16px;
+		width: 610px;
+		margin-bottom: 56px;
+	}
+
+	.movie-intro-in-letter-and-poster{
+		width: 1200px;
+		margin-left: 120px;
+		margin-right: 120px;
+	}
+
+	.movie-intro-in-letter{
+		width: 630px;
+		display: block;
+	  	float: left;
+	  	margin-right: 70px;
+	}
+
+	.movie-intro-in-poster{
+		width: 500px;
+		display: block;
+	  float: left;
+	}
+
+	.movie-poster img{
+		width: 500px;
+		height: 670px;
+	}
+
+	.movie-intro-content p:first-child{
+		margin-bottom: 24px;
+		font-weight: 400;
+	}
+
+	.bold-content{
+		display: block;
+	  	float: left;
+	  	margin-right: 20px;
+	}
+
+	.bold-content p{
+		font-weight: 600;
+		font-size: 16px;
+		width: 183px;
+		text-align: right;
+		margin-bottom: 12px;
+	}
+
+	.bold-content p:nth-child(6){
+		margin-bottom: 24px;
+	}
+
+	.bold-content p:nth-child(7){
+		margin-bottom: 24px;
+	}
+
+	.regular-content{
+		display: block;
+	  	float: left;
+	  	margin-right: 20px;
+	}
+
+	.regular-content p{
+		font-weight: 300;
+		font-size: 16px;
+		margin-bottom: 12px;
+		width: 407px;
+	}
+
+	.regular-content p:nth-child(6){
+		margin-bottom: 4px;
+	}
+
+	.regular-content p:nth-child(7){
+		margin-bottom: 24px;
+	}
+
+	.movie-agency h4{
+		font-size: 12px;
+		font-weight: 300;
+	}
+
+	.clearfix{
+		clear:both;
+	}
+
+	.gallery-post{
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.gallery-post a{
+		display: block;
+  		float: left;
+	}
+
+
+    .gallery-list h1{
+		font-size: 32px;
+		font-weight: 400;
+		color: #545454;
+		text-align: center;
+		margin-bottom: 48px;
+	}
+
+	.gallery-post img{
+		width: 380px;
+		border-radius: 8px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 56px;
+
+		transition: all 0.2s linear;
+	}
+
+	.gallery-post img:hover{
+		transform: scale(1.02);
+	}
+
+	.footer{
+      margin-top: 28px;
+      background-color: #E1E9F4;
+      text-align: center;
+    }
+
+    .footer h3{
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      padding-top: 32px;
+    }
+
+    .footer .icon{
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    .footer .icon a{
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .footer .footer-link a{
+      font-size: 12px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #3380C6;
+    }
+
+    .footer h4{
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 32px;
+      color: white;
+    }
+	</style>
+</head>
+<body>
+	<div class = "navibar">
+      <ul id = "menu">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="Ghibli-introduction.html">DISCOVER & WORK</a></li>
+          <li><a href="index.html" id="logo">
+            <img src="https://w.namu.la/s/5d46e06b95c5ea1462ab900dee8de94cbde5d7528a35fa1c1f1926d4c0ebbbe5a6c86d25d5a16399d7e3ba1decb840d132d05379426c9621f5c6dd854aa7c7823c786efc1ebaca739cbde96196b06e915576cdcc5643c198d16dc1b6480b4765" height="60"></a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">EVENT</a></li>
+          <li><a href="#">MORE</a></li>
+        </ul>
+    </div>
+
+    <div class = "header-img">
+      <div class = "header-title">하울의 움직이는 성</div>
+    </div>
+
+    <div class = "movie-intro">
+      <h1>ABOUT MOVIE</h1>
+
+      <div class = "movie-intro-in-letter-and-poster">
+
+	      <div class = "movie-intro-in-letter">
+	      	<div class = "movie-title">
+	      		<h2>하울의 움직이는 성</h2>
+	      	</div>
+
+	      	<div class = "movie-title-sub">
+	      		<h3>Howl's Moving Castle</h3>
+	      	</div>
+
+	      	<div class = "movie-intro-content">
+	      		<p>[소녀가 마법에 걸린 순간, 꽃미남 마법사의 성문이 열렸다!]</p>
+
+				<p>어느 날, 영문도 모른 채 마녀의 저주로 인해 할머니가 된 소녀 ‘소피’.
+					절망 속에서 길을 걷다가 거대한 마법의 성에 들어가게 된다.
+					그곳에서 자신과 마법사 하울의 계약을 깨주면 저주를 풀어주겠다는
+					불꽃 악마 ‘캘시퍼’의 제안을 받고 청소부가 되어 ‘움직이는 성’에 머물게 되는데…
+				</p>
+	      	</div>
+
+	      	<div class = movie-intro-list>
+
+	      		<div class = "small-content">
+		      		<div class = "bold-content">
+			      		<p>원작</p>
+			      		<p>각본-감독</p>
+			      		<p>프로듀서</p>
+			      		<p>음악</p>
+			      		<p>주제가</p>
+			      		<p>목소리 출현</p>
+			      		<p>상영시간</p>
+			      		<p>배급</p>
+			      		<p>공개일</p>
+		      		</div>
+
+		      		<div class = "regular-content">
+			      		<p>다이애나 윈 존스</p>
+			      		<p>미야자키 하야오</p>
+			      		<p>스즈키 토시오</p>
+			      		<p>히사이시</p>
+			      		<p>배상 치에코</p>
+			      		<p>배상 치에코, 기무라 타쿠야, 미와 아카히로, 원 타츠야, 카미키 류노스케</p>
+			      		<p>약 119분</p>
+			      		<p>토호</p>
+			      		<p>2004. 11. 20(토)</p>
+			      	</div>
+				</div>
+
+			</div>
+		</div>
+
+				<div class = "movie-intro-in-poster">
+					<div class = "movie-poster">
+						<img src ="https://www.ghibli.jp/images/howl.jpg">
+					</div>
+					<div class = "movie-agency">
+						<h4>© 2004 Studio Ghibli</h4>
+					</div>
+				</div>
+
+				<div class = "clearfix"></div>
+		</div>
+	</div>
+
+  	<div class = "gallery-list">
+  		<h1>GALLERY</h1>
+
+  		<div class = gallery-post>
+	  		<a href="#"><img src = "https://www.ghibli.jp/gallery/howl004.jpg"></a>
+	  		<a href="#"><img src = "https://www.ghibli.jp/gallery/howl005.jpg"></a>
+	  		<a href="#"><img src = "https://www.ghibli.jp/gallery/howl012.jpg"></a>
+	  		<a href="#"><img src = "https://www.ghibli.jp/gallery/howl017.jpg"></a>
+	  		<a href="#"><img src = "https://www.ghibli.jp/gallery/howl034.jpg"></a>
+	  		<a href="#"><img src = "https://www.ghibli.jp/gallery/howl048.jpg"></a>
+
+	  		<div class ="clearfix"></div>
+	  	</div>
+  	</div>
+
+  	<div class = "footer">
+		<h3>FOLLOW US ON</h3>
+
+		<div class = "icon">
+			<a href="#">
+	        	<img src ="https://img.icons8.com/ultraviolet/344/facebook-new.png" height="20"></a>
+	      	<a href="#">
+	        	<img src ="https://img.icons8.com/ultraviolet/344/instagram-new.png" height="20"></a>
+	      	<a href="#">
+	        	<img src ="https://img.icons8.com/ultraviolet/344/twitter.png" height="20"></a>
+	     </div>
+
+	     <div class = "footer-link">
+		     <a href = "#">Terms of Use |</a>
+		     <a href = "#"> Privacy Policy |</a>
+		     <a href = "#"> Your Korea Privacy Rights |</a>
+		     <a href = "#"> Children’s Online Privacy Policy |</a>
+		     <a href = "#"> Studio Ghibli Guest Services |</a>
+		     <a href = "#"> Advertise With Us |</a>
+		     <a href = "#"> Interest-Based Ads Do Not Sell My Personal Information |</a>
+		     <a href = "#"> Contact Us</a>
+	     </div>
+
+		<h4>© Studio Ghibli. All rights reserved</h4>
+	</div>
+</body>
+</html>

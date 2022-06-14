@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Ghibli-introduction</title>
+	<style>
+		*{
+ 		 	box-sizing: border-box;
+ 		 	font-family: 'Rubik', sans-serif;
+ 		 	color: #232323;
+ 		 	margin: 0;
+		}
+
+		.navibar{
+			height: 80px;
+			width: 1200px;
+			font-weight: 300;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.navibar #logo{
+			line-height: 85px;
+		}
+		
+		.navibar #logo img{
+  			vertical-align: middle;
+		}
+
+		.navibar #menu{
+		  	float: left;
+		  	list-style: none;
+		  	margin-left: auto;
+			margin-right: auto;
+		}
+
+		.navibar #menu li{
+		  	float: left;
+		  	margin-left: 100px;
+		  	line-height: 85px;
+		}
+
+		.navibar #menu li a{
+		  	color: #545454;
+		  	font-size: 16px;
+		  	font-weight: light;
+		  	text-decoration: none;
+		}
+
+		.navibar #menu li a:hover{
+		  	color: #3380C6;
+		}
+
+		.header-img{
+        height: 480px;
+        background-image: url("https://www.ghibli.jp/gallery/redturtle047.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .header-title{
+      font-size: 48px;
+      font-weight: 700;
+      top: 211px;
+      left: 531px;
+      letter-spacing: 10px;
+      color:  white;
+      position: absolute;
+    }
+
+    .movie h1{
+      font-size: 32px;
+      font-weight: 400;
+      color: #545454;
+      text-align: center;
+      margin-top: 84px;
+      margin-bottom: 48px;
+    }
+
+    .movie-list{
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .movie-poster{
+      text-align: center;
+      width: 280px;
+      display: block;
+      text-decoration: none;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 56px;
+    }
+
+    .movie-poster img{
+      border-radius: 8px;
+      width: 270px;
+      height: 356px;
+    }
+
+    .movie-name{
+      margin-top: 24px;
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    .movie-date{
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .clearfix{
+        clear:both;
+    }
+
+    .footer{
+      margin-top: 28px;
+      background-color: #E1E9F4;
+      text-align: center;
+    }
+
+    .footer h3{
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      padding-top: 32px;
+    }
+
+    .footer .icon{
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    .footer .icon a{
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .footer .footer-link a{
+      font-size: 12px;
+      font-weight: 300;
+      text-decoration: none;
+      color: #3380C6;
+    }
+
+    .footer h4{
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 400;
+      padding-bottom: 32px;
+      color: white;
+    }
+	</style>
+</head>
+<body>
+	<div class = "navibar">
+      <ul id = "menu">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="Ghibli-introduction.html">DISCOVER & WORK</a></li>
+          <li><a href="index.html" id="logo">
+            <img src="https://w.namu.la/s/5d46e06b95c5ea1462ab900dee8de94cbde5d7528a35fa1c1f1926d4c0ebbbe5a6c86d25d5a16399d7e3ba1decb840d132d05379426c9621f5c6dd854aa7c7823c786efc1ebaca739cbde96196b06e915576cdcc5643c198d16dc1b6480b4765" height="60"></a></li>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#">EVENT</a></li>
+          <li><a href="#">MORE</a></li>
+        </ul>
+    </div>
+
+    <div class = "header-img">
+      <div class = "header-title">OUR WORKS</div>
+    </div>
+
+    <div class = "movie">
+      <h1>MOVIE ANIMATION</h1>
+      
+      <div class = "movie-list">
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/nausicaa.jpg">
+          <div class ="movie-name">바람 계곡의 나우시카</div>
+          <div class ="movie-date">1984</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/laputa.jpg">
+          <div class ="movie-name">천공의 성 라퓨타</div>
+          <div class ="movie-date">1986</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/totoro.jpg">
+          <div class ="movie-name">이웃집 토토로</div>
+          <div class ="movie-date">1988</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/majo.jpg">
+          <div class ="movie-name">마녀배달부 키키</div>
+          <div class ="movie-date">1989</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/omoide.jpg">
+          <div class ="movie-name">추억은 방울방울</div>
+          <div class ="movie-date">1991</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/porco.jpg">
+          <div class ="movie-name">붉은 돼지</div>
+          <div class ="movie-date">1992</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/mimi.jpg">
+          <div class ="movie-name">귀를 기울이면</div>
+          <div class ="movie-date">1995</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/mononoke.jpg">
+          <div class ="movie-name">원령 공주</div>
+          <div class ="movie-date">1997</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/chihiro.jpg">
+          <div class ="movie-name">센과 치히로의 행방불명</div>
+          <div class ="movie-date">2001</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/baron.jpg">
+          <div class ="movie-name">고양이의 보은</div>
+          <div class ="movie-date">2002</div>
+        </a>
+
+        <a href="Ghibli-detail.html" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/howl.jpg">
+          <div class ="movie-name">하울의 움직이는 성</div>
+          <div class ="movie-date">2004</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/ponyo.jpg">
+          <div class ="movie-name">벼랑 위의 포뇨</div>
+          <div class ="movie-date">2008</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/karigurashi.jpg">
+          <div class ="movie-name">마루 밑 아리에티</div>
+          <div class ="movie-date">2010</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/marnie.jpg" width= "270">
+          <div class ="movie-name">추억의 마니</div>
+          <div class ="movie-date">2014</div>
+        </a>
+
+        <a href="#" class = "movie-poster">
+          <img src ="https://www.ghibli.jp/images/aya-and-the-witch.jpg">
+          <div class ="movie-name">아야와 마녀</div>
+          <div class ="movie-date">2020</div>
+        </a>
+
+        <div class ="clearfix"></div>
+      </div>
+ 	</div>
+
+ 	<div class = "footer">
+    <h3>FOLLOW US ON</h3>
+
+    <div class = "icon">
+          <a href="#">
+            <img src ="https://img.icons8.com/ultraviolet/344/facebook-new.png" height="20"></a>
+          <a href="#">
+            <img src ="https://img.icons8.com/ultraviolet/344/instagram-new.png" height="20"></a>
+          <a href="#">
+            <img src ="https://img.icons8.com/ultraviolet/344/twitter.png" height="20"></a>
+       </div>
+
+       <div class = "footer-link">
+         <a href = "#">Terms of Use |</a>
+         <a href = "#"> Privacy Policy |</a>
+         <a href = "#"> Your Korea Privacy Rights |</a>
+         <a href = "#"> Children’s Online Privacy Policy |</a>
+         <a href = "#"> Studio Ghibli Guest Services |</a>
+         <a href = "#"> Advertise With Us |</a>
+         <a href = "#"> Interest-Based Ads Do Not Sell My Personal Information |</a>
+         <a href = "#"> Contact Us</a>
+       </div>
+
+    <h4>© Studio Ghibli. All rights reserved</h4>
+  </div>
+</body>
+</html>

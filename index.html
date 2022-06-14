@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Ghibli-main</title>
+	<style>
+		*{
+ 		 	box-sizing: border-box;
+ 		 	font-family: 'Rubik', sans-serif;
+ 		 	color: #232323;
+ 		 	margin: 0;
+		}
+
+		.navibar{
+			height: 80px;
+			width: 1200px;
+			font-weight: 300;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.navibar #logo{
+			line-height: 85px;
+		}
+		
+		.navibar #logo img{
+  			vertical-align: middle;
+		}
+
+		.navibar #menu{
+		  	float: left;
+		  	list-style: none;
+		  	margin-left: auto;
+			margin-right: auto;
+		}
+
+		.navibar #menu li{
+		  	float: left;
+		  	margin-left: 100px;
+		  	line-height: 85px;
+		}
+
+		.navibar #menu li a{
+		  	color: #545454;
+		  	font-size: 16px;
+		  	font-weight: light;
+		  	text-decoration: none;
+		}
+
+		.navibar #menu li a:hover{
+		  	color: #3380C6;
+		}
+
+		.header-img{
+		  	height: 480px;
+		  	background-image: url("https://www.ghibli.jp/gallery/totoro025.jpg");
+		  	background-repeat: no-repeat;
+		  	background-size: cover;
+		  	background-position: center center;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		  	position: relative;
+		}
+
+		.header-title{
+			font-size: 48px;
+			font-weight: 700;
+			top: 211px;
+			left: 483px;
+			letter-spacing: 10px;
+			color:  white;
+			position: absolute;
+		}
+
+		.recent-news h1{
+			font-size: 32px;
+			font-weight: 400;
+			color: #545454;
+			text-align: center;
+			margin-top: 84px;
+			margin-bottom: 48px;
+		}
+
+		.news-list{
+  			width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.news-list img{
+			width: 375px;
+			height: 239px;
+			border-radius: 8px;
+  			transition: all 0.2s linear;
+		}
+
+		.news-list img:hover{
+  			transform: scale(1.02);
+		}		
+
+		.news{
+			text-align: center;
+			width: 375px;
+			display: block;
+			color: #545454;
+			text-decoration: none;
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.news-date{
+			font-size: 12px;
+			font-weight: 600;
+		  	margin-top: 24px;
+		  	margin-bottom: 16px;
+		}
+
+		.news-content{
+			width: 304px;
+		  	font-size: 14px;
+		  	font-weight: 300;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		}
+
+		.clearfix{
+		  	clear:both;
+		}
+
+		.event-in-progress h1{
+			font-size: 32px;
+			font-weight: 400;
+			color: #545454;
+			text-align: center;
+			margin-top: 84px;
+			margin-bottom: 48px;
+		}
+
+		.event-pic-1{
+			width: 895px;
+			height: 494px;
+		  	background-image: url("https://www.ghibli.jp/images/ghiblipark-exhibition.jpg");
+		  	border-radius: 8px;
+		  	background-repeat: no-repeat;
+		  	background-size: cover;
+		  	background-position: center center;
+		  	margin-left: 120px;
+		  	border-radius: 8px;
+		  	position: relative;
+		}
+
+		.event-content-1{
+			position: absolute;
+			background-color: white;
+			margin-top: 85px;
+			margin-right: 120px;
+			float: right;
+			left: 813px;
+			width: 387px;
+			border-radius: 8px;
+			box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);	
+		}
+
+		.event-progress1{
+			margin-bottom: 56px;
+		}
+
+		.event-pic-2{
+			width: 895px;
+			height: 494px;
+		  	background-image: url("https://www.ghibli.jp/images/suzuki20.jpg");
+		  	background-repeat: no-repeat;
+		  	background-size: cover;
+		  	background-position: center center;
+		  	margin-right: 120px;
+		  	float: right;
+		  	border-radius: 8px;
+		  	position: relative;
+		}
+
+		.event-content-2{
+			position: absolute;
+			background-color: white;
+			margin-top: 85px;
+			float: left;
+			right: 813px;
+			width: 387px;
+			border-radius: 8px;
+			box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.2);	
+		}
+
+		.event-in-progress{
+			margin-bottom: 84px;
+		}
+
+		.event-content-title{
+			font-size: 20px;
+			font-weight: 700;
+			padding: 44px 44px 4px 44px;
+		}
+
+		.event-content-date{
+			font-size: 12px;
+			font-weight: 500;
+			text-align: center;
+			padding: 4px 44px 8px 44px;
+		}
+
+		.event-content-content{
+			padding: 8px 44px;
+			height: 102px;
+			overflow: auto;
+			font-size: 14px;
+			font-weight: 300;
+		}
+
+		.view-more a {
+			display: block;
+			background-color: #C9DDF3;
+		 	border-radius: 4px;
+			width: 300px;
+			height: 28px;
+		    
+		    font-size: 12px;
+		    text-align: center;
+			line-height: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 28px;
+			margin-bottom: 28px;
+		    
+			text-decoration: none;
+			color: #333333;
+		  
+		  	transition: all 0.2s linear;
+		}
+
+		.view-more a:hover{
+			color : white;
+			border-color: #3380C6;
+			background-color: #3380C6;
+			box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.5);
+		}
+
+		.footer{
+			background-color: #E1E9F4;
+			text-align: center;
+		}
+
+		.footer h3{
+			font-size: 18px;
+			font-weight: 600;
+			color: white;
+			padding-top: 32px;
+		}
+
+		.footer .icon{
+			margin-top: 24px;
+			margin-bottom: 24px;
+		}
+
+		.footer .icon a{
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+
+		.footer .footer-link a{
+			font-size: 12px;
+			font-weight: 300;
+			text-decoration: none;
+			color: #3380C6;
+		}
+
+		.footer h4{
+			margin-top: 12px;
+			font-size: 14px;
+			font-weight: 400;
+			padding-bottom: 32px;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<div class = "navibar">
+    	<ul id = "menu">
+	        <li><a href="#">ABOUT</a></li>
+	        <li><a href="Ghibli-introduction.html">DISCOVER & WORK</a></li>
+        	<li><a href="Ghibli-main.html" id="logo">
+        		<img src="https://w.namu.la/s/5d46e06b95c5ea1462ab900dee8de94cbde5d7528a35fa1c1f1926d4c0ebbbe5a6c86d25d5a16399d7e3ba1decb840d132d05379426c9621f5c6dd854aa7c7823c786efc1ebaca739cbde96196b06e915576cdcc5643c198d16dc1b6480b4765" height="60"></a></li>
+	        <li><a href="#">NEWS</a></li>
+	        <li><a href="#">EVENT</a></li>
+	        <li><a href="#">MORE</a></li>
+      	</ul>
+    </div>
+
+    <div class = "header-img">
+    	<div class = "header-title">STUDIO GHIBLI</div>
+    </div>
+
+    <div class = "recent-news">
+    	<h1>RECENT NEWS</h1>
+
+    	<div class = "news-list">
+			<a href="#" class = "news">
+	          <img src ="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcgBTJu%2FbtrtJDCKRkI%2F8FrCgPdksN1GI2E65vqhuk%2Fimg.jpg" width="225">
+	          <div class ="news-date">June, 10, 2022</div>
+	          <div class ="news-content">「노나카군발 지브리 소식」 2022년 6월호, 히사이시 양씨 프로듀서 작품 '이웃집 토토로'의 무대화가 결정되었다는 소식입니다.</div>
+        	</a>
+
+	        <a href="#" class = "news">
+	          <img src ="https://www.tohostage.com/spirited_away/common/img/report2111/report01_1.jpg">
+	          <div class ="news-date">June, 02, 2022</div>
+	          <div class ="news-content">5월 5일, NHK 「두 사람의 디스턴스」에서 「천과 치히로의 숨겨진 스페셜 하시모토 칸나·가미시라이시 모네」가 방송됩니다</div>
+	        </a>
+
+	        <a href="#" class = "news">
+	          <img src ="https://www.ghibli.jp/gallery/majo010.jpg">
+	          <div class ="news-date">June, 02, 2022</div>
+	          <div class ="news-content">가족의 달을 맞이해 2주 연속 스튜디오 지브리의 작품,「마녀의 택배」와 「벼랑 위의 포뇨」를 '금요일의 로드쇼'에서 방송 예정입니다.</div>
+	        </a>
+
+	        <div class = "clearfix"></div>
+    	</div>
+    </div>
+
+    <div class = "event-in-progress">
+    	<h1>EVENT IN PROGRESS</h1>
+
+    	<div class = event-progress1>
+    	<div class = "event-pic-1">
+    	
+    	<div class = "event-content-1">
+    		<div class = "event-content-title">
+    			지브리 파크와 지브리 전시회(나가노현립 미술관)
+    		</div>
+
+    		<div class = "event-content-date">
+    			2022.07.16 (토) - 2022.10.10 (월)
+    		</div>
+
+    		<div class = "event-content-content">
+    			2022년 11월 1일에, 「사랑・지구의 날 기념 공원」내에 지브리의 세계를 표현한 공원 시설과 지브리 파크가 개원합니다.
+    			지브리 파크는 진짜 애니메이션 세계를 자신의 발로 걷고 발견하는 장소. 지브리 파크를 코 앞에서 즐길 수 있는 전시가 나가노현에서 시작됩니다.
+    		</div>
+
+    		<div class = "view-more">
+    			<a href="#">VIEW MORE</a>
+    		</div>
+    	</div>
+    	</div>
+		</div>
+
+		<div class = event-progress2>
+    	<div class = "event-pic-2">
+
+    	<div class = "event-content-2">
+    		<div class = "event-content-title">
+    			스즈키 토시오와 지브리전(교토 문화 박물)
+    		</div>
+
+    		<div class = "event-content-date">
+    			2022.04.23 (토) - 2022.06.19 (일)
+    		</div>
+
+    		<div class = "event-content-content">
+    			《책으로 풀어내는 스즈키 토시오》 타카하타 이츠미, 마야자키 하야오 양 감독과 함께 세계를 대표하는 수많은 애니메이션 영화를 세상에 내보낸 스튜디오 지브리 프로듀서 스즈키 토시오. 전시에서는, 전후의 나고야에서 자라, 쇼와로부터 헤이세이, 령화의 시대를 계속 달리고 있는 스즈키가 「읽어 온 책」과 「그 시대 배경」에 주목합니다.
+    		</div>
+
+    		<div class = "view-more">
+    			<a href="#">VIEW MORE</a>
+    		</div>
+    	</div>
+    	</div>
+    	</div>
+
+    	<div class = "clearfix"></div>
+    </div>
+	
+	<div class = "footer">
+		<h3>FOLLOW US ON</h3>
+
+		<div class = "icon">
+			<a href="#">
+	        	<img src ="https://img.icons8.com/ultraviolet/344/facebook-new.png" height="20"></a>
+	      	<a href="#">
+	        	<img src ="https://img.icons8.com/ultraviolet/344/instagram-new.png" height="20"></a>
+	      	<a href="#">
+	        	<img src ="https://img.icons8.com/ultraviolet/344/twitter.png" height="20"></a>
+	     </div>
+
+	     <div class = "footer-link">
+		     <a href = "#">Terms of Use |</a>
+		     <a href = "#"> Privacy Policy |</a>
+		     <a href = "#"> Your Korea Privacy Rights |</a>
+		     <a href = "#"> Children’s Online Privacy Policy |</a>
+		     <a href = "#"> Studio Ghibli Guest Services |</a>
+		     <a href = "#"> Advertise With Us |</a>
+		     <a href = "#"> Interest-Based Ads Do Not Sell My Personal Information |</a>
+		     <a href = "#"> Contact Us</a>
+	     </div>
+
+		<h4>© Studio Ghibli. All rights reserved</h4>
+	</div>
+</body>
+</html>
